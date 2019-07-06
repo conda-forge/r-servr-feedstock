@@ -1,4 +1,4 @@
-{% set version = '0.12' %}
+{% set version = '0.14' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/servr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/servr/servr_{{ version }}.tar.gz
-  sha256: 196a9f5c1a7e707c9e57ae540769be78419632831a76ea940d705139ff370774
+  sha256: 536ae55bf5215ad162283f83a6c9e21acff92611d3eb09a333a125ad9eb3527e
 
 build:
   merge_build_host: True  # [win]
@@ -56,7 +56,7 @@ extra:
 # Package: servr
 # Type: Package
 # Title: A Simple HTTP Server to Serve Static Files or Dynamic Documents
-# Version: 0.12
+# Version: 0.14
 # Authors@R: c( person("Yihui", "Xie", role = c("aut", "cre"), email = "xie@yihui.name", comment = c(ORCID = "0000-0003-0645-5666")), person("Carson", "Sievert", role = "ctb"), person("Jesse", "Anderson", role = "ctb"), person("Ramnath", "Vaidyanathan", role = "ctb"), person() )
 # Maintainer: Yihui Xie <xie@yihui.name>
 # Description: Start an HTTP server in R to serve static files, or dynamic documents that can be converted to HTML files (e.g., R Markdown) under a given directory.
@@ -69,7 +69,7 @@ extra:
 # Encoding: UTF-8
 # RoxygenNote: 6.1.1
 # NeedsCompilation: no
-# Packaged: 2019-02-07 16:48:08 UTC; yihui
+# Packaged: 2019-06-11 20:07:13 UTC; yihui
 # Author: Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>), Carson Sievert [ctb], Jesse Anderson [ctb], Ramnath Vaidyanathan [ctb]
 # Repository: CRAN
-# Date/Publication: 2019-02-07 17:40:13 UTC
+# Date/Publication: 2019-06-11 20:30:03 UTC
