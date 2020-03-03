@@ -1,4 +1,4 @@
-{% set version = "0.15" %}
+{% set version = "0.16" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/servr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/servr/servr_{{ version }}.tar.gz
-  sha256: b13753018d3d06e95a81a908f559119c63a63a304f5e547370394d0e9f4a33a5
+  sha256: cc950bedbd52f2d93c54157dc5b261113be6baee2d9e90e99a8de048c09fda80
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -44,10 +44,9 @@ test:
 about:
   home: https://github.com/yihui/servr
   license: GPL
-  summary: Start an HTTP server in R to serve static files, or dynamic documents that can be
-    converted to HTML files (e.g., R Markdown) under a given directory.
+  summary: Start an HTTP server in R to serve static files, or dynamic documents that can be converted to HTML files (e.g., R Markdown) under a given directory.
   license_family: GPL
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
