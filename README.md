@@ -3,7 +3,7 @@ About r-servr
 
 Home: https://github.com/yihui/servr
 
-Package license: GPL
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD-3-Clause
 
