@@ -25,13 +25,13 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-httpuv >=1.4.0
+    - r-httpuv >=1.5.2
     - r-jsonlite
     - r-mime >=0.2
     - r-xfun
   run:
     - r-base
-    - r-httpuv >=1.4.0
+    - r-httpuv >=1.5.2
     - r-jsonlite
     - r-mime >=0.2
     - r-xfun
@@ -43,10 +43,11 @@ test:
 
 about:
   home: https://github.com/yihui/servr
-  license: GPL
+  license: GPL-2.0-or-later
   summary: Start an HTTP server in R to serve static files, or dynamic documents that can be converted to HTML files (e.g., R Markdown) under a given directory.
   license_family: GPL
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
