@@ -1,4 +1,4 @@
-{% set version = "0.24" %}
+{% set version = "0.25" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/servr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/servr/servr_{{ version }}.tar.gz
-  sha256: d94e1d31802ce6bbab7a5838ff94cbca8cd998237d834ff25fedf7514f41a087
+  sha256: e6ae0d4c09e9037268b1c291c36c93ba0a74c31fe2fcb1f0652b2ae9fca5e73c
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
