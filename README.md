@@ -1,11 +1,11 @@
-About r-servr
-=============
+About r-servr-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-servr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/yihui/servr
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-servr-feedstock/blob/main/LICENSE.txt)
 
 Summary: Start an HTTP server in R to serve static files, or dynamic documents that can be converted to HTML files (e.g., R Markdown) under a given directory.
 
