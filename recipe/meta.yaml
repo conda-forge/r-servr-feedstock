@@ -1,38 +1,43 @@
-{% set version = "0.32" %}
+{% set version = "0.33" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-servr
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/servr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/servr/servr_{{ version }}.tar.gz
-  sha256: 672aca913087c5164020fe3e79bbfee47fbc4fedd5e2cc824ee91fb48ef03da6
+  sha256: 36c5787a8bcacc0f3e24c63c9fc271d449fc7d61da13968a536b1f117f324c2b
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-httpuv >=1.5.2
     - r-jsonlite
     - r-mime >=0.2
-    - r-xfun
+    - r-xfun >=0.58
   run:
     - r-base
     - r-httpuv >=1.5.2
     - r-jsonlite
     - r-mime >=0.2
-    - r-xfun
+    - r-xfun >=0.58
 
 test:
   commands:
